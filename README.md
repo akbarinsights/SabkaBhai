@@ -8,7 +8,7 @@ A Windows desktop application for keeping project context and conversation recor
 
 ![Reading Planner demo project with saved conversation records](images/01-project-workspace.png)
 
-*Actual application UI with fictional data from the built-in local simulator. No live AI provider is used in these screenshots.*
+*Actual 0.1.3 application UI with fictional data from the built-in local simulator. No live AI provider is used in these screenshots.*
 
 ## Why I built it
 
@@ -26,6 +26,12 @@ Sabka Bhai provides a local workspace for organizing that work. It keeps saved c
 - **Encrypted application records:** Store project records locally with a Windows-protected encryption key, with encrypted backup and recovery workflows.
 
 Account windows open without waiting for the entire website to finish loading, so a slow page does not keep the main workspace busy.
+
+## A workspace organized around the task
+
+Version 0.1.3 introduces graphite navigation, cool-light reading surfaces and separate project tabs: **Conversation, Recording, Context, Handoffs, Files and Project settings**. Accounts, backups and diagnostics have their own screens. Switching tabs changes the view instead of scrolling through unrelated controls.
+
+Search and unfinished form text stay with their project while navigating within the running app. Unsaved drafts are held in memory, not silently written to disk.
 
 ## A typical workflow
 
@@ -64,15 +70,15 @@ The application does not require model API keys or make model API calls. It does
 
 ## Current status
 
-**Windows preview, version 0.1.2.** The latest local verification passed:
+**Windows preview, version 0.1.3.** The latest local verification passed:
 
 | Test layer | Passed |
 | --- | ---: |
 | Unit tests | 104 |
-| Development Electron tests | 20 |
-| Packaged-executable tests | 5 |
+| Development Electron tests | 24 |
+| Packaged-executable tests | 6 |
 
-Checks cover session isolation, recording, backup/recovery, restart durability and browser-loading behavior. These results use controlled local fixtures; they do not establish full compatibility with live AI provider websites.
+Checks cover session isolation, recording, backup/recovery, restart durability, browser-loading behavior, tab navigation and draft retention. These results use controlled local fixtures; they do not establish full compatibility with live AI provider websites.
 
 ## Important boundaries
 
